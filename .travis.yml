@@ -11,6 +11,7 @@ before_install:
   - composer self-update
   
 install:
+  - composer require satooshi/php-coveralls
   - composer install --prefer-dist
 
 script:
