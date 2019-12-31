@@ -19,7 +19,7 @@ class CoreTest extends TestCase
     public function testImageText()
     {
         $core = new Core();
-        $text = $core->imageText(__DIR__.'/Mocks/Images/text.png');
+        $text = $core->imageText(__DIR__.'/../Mocks/Images/text.png');
         
         $this->expectOutputString($text);
         print "The quick brown fox\njumps over\nthe lazy dog.";
