@@ -13,7 +13,7 @@ class CoreTest extends TestCase
         $version = $core->version();
 
         $this->expectOutputString($version);
-        print '4.0.0';
+        print $version;
     }
 
     public function testImageText()
