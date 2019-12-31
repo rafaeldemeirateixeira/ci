@@ -24,12 +24,14 @@
         }
     },
     "scripts": {
-        "phpunit": "phpunit tests",
+        "phpunit": "phpunit tests/Unit --coverage-clover build/logs/clover.xml",
         "phpcs": "phpcs --standard=PSR2 -n src",
+        "phpcs-test": "phpcs --standard=PSR2 -n tests/Unit",
         "phpcbf": "phpcbf --standard=PSR2 -n src",
-        "test": [
+        "app-test": [
             "@phpunit",
-            "@phpcs"
+            "@phpcs",
+            "@phpcs-test"
         ]
     }
 }

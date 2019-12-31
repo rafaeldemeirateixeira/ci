@@ -14,10 +14,8 @@ install:
   - composer install --prefer-dist
 
 script:
-  - vendor/bin/phpcs --standard=PSR2 -n src
-  - vendor/bin/phpcs --standard=PSR2 -n tests/Unit
   - mkdir -p build/logs
-  - vendor/bin/phpunit tests --coverage-clover build/logs/clover.xml
+  - composer app-test
 
 before_install:
   - sudo apt-get update
