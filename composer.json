@@ -1,0 +1,35 @@
+{
+    "name": "rafaeldemeirateixeira/phpocr",
+    "description": "Leitor OCR para imagem e pdf.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael Teixeira",
+            "email": "rafaeldemeirateixeira@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "thiagoalessio/tesseract_ocr": "dev-master",
+        "php-coveralls/php-coveralls": "2.2.x-dev"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^4.0",
+        "phpunit/phpunit": "^8.4",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "RasTeixeira\\": "src"
+        }
+    },
+    "scripts": {
+        "phpunit": "phpunit tests",
+        "phpcs": "phpcs --standard=PSR2 -n src",
+        "phpcbf": "phpcbf --standard=PSR2 -n src",
+        "test": [
+            "@phpunit",
+            "@phpcs"
+        ]
+    }
+}

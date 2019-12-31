@@ -1,0 +1,17 @@
+version: '3.0'
+services:
+  phpocr:
+    build: ./.docker/php
+    volumes:
+      - .:/var/www
+      - ~/.composer:/root/composer
+    ports:
+      - "8000:8000"
+    environment:
+      XDEBUG_CONFIG: "remote_host=172.17.0.1 remote_enable=1"
+    networks:
+      - laravel
+
+networks:
+  laravel:
+    driver: bridge
