@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/rafaeldemeirateixeira/image-text-reader.svg?branch=master)](https://travis-ci.org/rafaeldemeirateixeira/image-text-reader)
-[![Coverage Status](https://coveralls.io/repos/github/rafaeldemeirateixeira/image-text-reader/badge.svg)](https://coveralls.io/github/rafaeldemeirateixeira/image-text-reader)
+[![Build Status](https://travis-ci.org/rafaeldemeirateixeira/ci.svg?branch=master)](https://travis-ci.org/rafaeldemeirateixeira/ci)
+[![Coverage Status](https://coveralls.io/repos/github/rafaeldemeirateixeira/ci/badge.svg?branch=master)](https://coveralls.io/github/rafaeldemeirateixeira/ci?branch=master)
 
 ## Implementação do Travis CI, Coveralls, PHPUnit, PHP Mess Detector
 
