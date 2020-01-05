@@ -27,7 +27,7 @@
     },
     "scripts": {
         "phpunit": "phpunit tests/Unit --coverage-clover build/logs/clover.xml",
-        "phpcs": "phpcs --standard=PSR2 -n src tests/Unit",
+        "phpcs": "phpcs --standard=PSR2 -n src tests/Unit tests/MessDetector",
         "phpcbf": "phpcbf --standard=PSR2 -n src",
         "phpmd": "phpmd src/ text cleancode,controversial,design,unusedcode,rulesets/custom.xml",
         "app-test": [

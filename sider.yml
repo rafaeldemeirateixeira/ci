@@ -1,0 +1,6 @@
+linter:
+  phpmd:
+    target:
+      - src
+    rule: cleancode,controversial,design,unusedcode,rulesets/custom.xml
+    exclude: tests
