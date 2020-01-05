@@ -2,7 +2,7 @@
 
 namespace RasTeixeiraTests\MessDetector;
 
-class CleanCode
+class CleanCodeTest
 {
     /**
      * A boolean flag argument is a reliable indicator for a violation 
