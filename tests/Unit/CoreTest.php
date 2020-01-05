@@ -1,6 +1,6 @@
 <?php
 
-namespace RasTeixeira;
+namespace RasTeixeiraTests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use RasTeixeira\Core;
