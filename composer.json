@@ -29,7 +29,7 @@
         "phpunit": "phpunit tests/Unit --coverage-clover build/logs/clover.xml",
         "phpcs": "phpcs --standard=PSR2 -n src tests/Unit",
         "phpcbf": "phpcbf --standard=PSR2 -n src",
-        "phpmd": "phpmd src/ text cleancode,codesize,controversial,design,naming,unusedcode",
+        "phpmd": "phpmd src/ text cleancode,controversial,design,unusedcode,rulesets/custom.xml",
         "app-test": [
             "@phpunit",
             "@phpcs",
