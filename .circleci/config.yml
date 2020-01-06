@@ -8,8 +8,8 @@ jobs:
       - checkout
 
       - run: apt-get update
-      - run: docker-php-ext-install zip
-      - run: apt-get install tesseract-ocr -y
+      - run: apt-get install -y libzip-dev unzip && docker-php-ext-install zip
+      - run: apt-get install -y tesseract-ocr
 
       - restore_cache:
           keys:
