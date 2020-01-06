@@ -10,6 +10,8 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y libzip-dev unzip && docker-php-ext-install zip
       - run: apt-get install -y tesseract-ocr
+      - run: curl https://getcomposer.org/composer.phar --output /usr/bin/composer
+      - run: chmod +x /usr/bin/composer
 
       - restore_cache:
           keys:
