@@ -14,7 +14,7 @@ install:
 
 script:
   - mkdir -p build/logs
-  - composer app-test
+  - composer ci
 
 before_install:
   - sudo apt-get update

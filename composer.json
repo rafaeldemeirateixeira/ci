@@ -30,7 +30,7 @@
         "phpcs": "phpcs --standard=PSR2 -n src tests/Unit tests/MessDetector",
         "phpcbf": "phpcbf --standard=PSR2 -n src",
         "phpmd": "phpmd src/ text cleancode,controversial,design,unusedcode,rulesets/custom.xml",
-        "app-test": [
+        "ci": [
             "@phpunit",
             "@phpcs",
             "@phpmd"

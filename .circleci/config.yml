@@ -25,4 +25,4 @@ jobs:
           paths:
             - ./vendor
 
-      - run: composer app-test
+      - run: composer ci
