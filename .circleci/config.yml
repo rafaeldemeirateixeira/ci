@@ -1,0 +1,28 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: php:7.4-fpm
+
+    steps:
+      - checkout
+
+      - run: apt-get update
+      - run: apt-get install -y libzip-dev unzip && docker-php-ext-install zip
+      - run: apt-get install -y tesseract-ocr
+      - run: curl https://getcomposer.org/composer.phar --output /usr/bin/composer
+      - run: chmod +x /usr/bin/composer
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.lock" }}
+            - v1-dependencies-
+
+      - run: composer install -n --prefer-dist
+
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - ./vendor
+
+      - run: composer ci
