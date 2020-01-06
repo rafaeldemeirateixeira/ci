@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: php:7.4-fpm
+
+    steps:
+      - checkout
+
+      - run: sudo apt-get update
+      - run: sudo docker-php-ext-install zip
+      - run: apt-get install tesseract-ocr -y
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.lock" }}
+            - v1-dependencies-
+
+      - run: composer install -n --prefer-dist
+
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - ./vendor
+
+      - run: composer app-test

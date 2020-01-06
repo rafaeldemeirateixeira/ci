@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/rafaeldemeirateixeira/ci.svg?branch=master)](https://travis-ci.org/rafaeldemeirateixeira/ci)
+[![CircleCI](https://circleci.com/gh/rafaeldemeirateixeira/ci.svg?style=svg)](https://circleci.com/gh/rafaeldemeirateixeira/ci)
 [![Coverage Status](https://coveralls.io/repos/github/rafaeldemeirateixeira/ci/badge.svg?branch=master)](https://coveralls.io/github/rafaeldemeirateixeira/ci?branch=master)
 
 ## Implementação do Travis CI, Coveralls, PHPUnit, PHP Mess Detector
