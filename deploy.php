@@ -25,7 +25,7 @@ set('writable_dirs', []);
 
 // Hosts
 host('production')
-    ->hostname('root@criare.ml')
+    ->hostname('deploy@criare.ml')
     ->port(22)
     ->stage('prod')
     ->set('keep_releases', 6)
