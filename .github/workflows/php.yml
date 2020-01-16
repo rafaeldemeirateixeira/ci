@@ -31,7 +31,7 @@ jobs:
       run: composer ci
 
     - name: Action - Deployer php
-      uses: musps/action-deployer-php@v0.0.2
+      uses: docker://tngsy/action-deployer-php:r1000
       with:
         args: deploy -vv
       env:
