@@ -11,10 +11,10 @@
     "minimum-stability": "dev",
     "require": {
         "thiagoalessio/tesseract_ocr": "dev-master",
-        "php-coveralls/php-coveralls": "2.2.x-dev"
+        "php-coveralls/php-coveralls": "2.2.x-dev",
+        "vlucas/phpdotenv": "^4.1@dev"
     },
     "require-dev": {
-        "vlucas/phpdotenv": "^4.0",
         "phpunit/phpunit": "^8.4",
         "squizlabs/php_codesniffer": "^3.5",
         "phpmd/phpmd": "dev-master",
