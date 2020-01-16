@@ -36,4 +36,5 @@ jobs:
         args: deploy -vv
       env:
         SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        SSH_PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
 
