@@ -1,6 +1,9 @@
 name: PHP Composer
 
-on: [push]
+on:
+  push:
+    branches:
+      - 'master'
 
 jobs:
   build:
@@ -28,5 +31,8 @@ jobs:
     - name: Run test suite
       run: composer ci
 
-    - name: Composer deploy
-      run: composer deploy
+    - name: Action - Deployer php
+      uses: musps/action-deployer-php@v0.0.2
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+
