@@ -30,3 +30,6 @@ jobs:
       
     - name: Run test suite
       run: composer ci
+
+    - name: Composer deploy
+      run: composer deploy
