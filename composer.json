@@ -35,6 +35,7 @@
             "@phpunit",
             "@phpcs",
             "@phpmd"
-        ]
+        ],
+        "deploy": "dep deploy -v"
     }
 }
