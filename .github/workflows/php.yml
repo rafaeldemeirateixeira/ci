@@ -30,10 +30,3 @@ jobs:
     - name: Run test suite
       run: composer ci
 
-    - name: Action - Deployer php
-      uses: musps/action-deployer-php@master
-      with:
-        args: deploy -vv
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-
