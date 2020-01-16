@@ -32,6 +32,8 @@ jobs:
 
     - name: Action - Deployer php
       uses: musps/action-deployer-php@v0.0.2
+      with:
+        args: deploy -vv
       env:
         SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
 
