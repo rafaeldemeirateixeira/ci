@@ -31,10 +31,9 @@ jobs:
       run: composer ci
 
     - name: Action - Deployer php
-      uses: docker://tngsy/action-deployer-php:r1000
+      uses: musps/action-deployer-php@master
       with:
         args: deploy -vv
       env:
         SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        SSH_PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
 
