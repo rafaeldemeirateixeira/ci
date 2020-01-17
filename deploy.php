@@ -26,6 +26,7 @@ set('shared_dirs', []);
 // Writable dirs by web server 
 set('writable_dirs', []);
 
+// Option run command composer install
 option('vendors', null, InputOption::VALUE_OPTIONAL, 'Composer install.');
 
 // Hosts
