@@ -4,6 +4,9 @@ namespace Deployer;
 
 require 'recipe/common.php';
 
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
+
 // Project name
 set('application', 'PHP CI');
 
@@ -23,6 +26,8 @@ set('shared_dirs', []);
 // Writable dirs by web server 
 set('writable_dirs', []);
 
+option('vendors', null, InputOption::VALUE_OPTIONAL, 'Composer install.');
+
 // Hosts
 host('production')
     ->hostname('deploy@criare.ml')
@@ -32,6 +37,19 @@ host('production')
     ->set('branch', 'master')
     ->set('deploy_path', '/var/www/phpocr');
 
+task('vendors', function () {
+    if (!commandExist('unzip')) {
+        writeln('<comment>To speed up composer installation setup "unzip" command with PHP zip extension https://goo.gl/sxzFcD</comment>');
+    }
+
+    if (input()->hasOption('vendors')) {
+        $vendors = input()->getOption('vendors');
+        if ($vendors == 'install') {
+            run('cd {{release_path}} && {{bin/composer}} {{composer_options}}');
+        }
+    }
+});
+
 task('deploy', [
     'deploy:info',
     'deploy:prepare',
@@ -39,7 +57,7 @@ task('deploy', [
     'deploy:release',
     'deploy:update_code',
     'deploy:shared',
-    'deploy:vendors',
+    'vendors',
     'deploy:writable',
     'deploy:symlink',
     'deploy:unlock',
