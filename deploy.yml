@@ -7,3 +7,4 @@
       git:
         repo: 'git@github.com:rafaeldemeirateixeira/ci.git'
         dest: "/var/www/phpocr"
+        version: "develop"
