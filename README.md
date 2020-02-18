@@ -17,4 +17,4 @@ Integrações feitas:
 * PHPCS Code Sniffer;
 ```
 
-Este pacote tem por finalidade realizar testes de integração contínua(CI). O objetivo deste pacote é exclusivo para fins didáticos. O Tesseract OCR é uma dependência do projeto para realização de testes e validações de ambiente. Também é possível obter textos de imagens.
+Este pacote tem por finalidade realizar testes de integração contínua(CI). O objetivo deste pacote é exclusivo para fins didáticos. O Tesseract OCR é uma dependência do projeto para realização de testes e validações de ambiente. Também é possível obter textos de imagens. :rocket:
