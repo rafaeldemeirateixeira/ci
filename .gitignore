@@ -4,3 +4,4 @@ tests/log
 .vscode
 .phpunit.*
 .env
+deploy.retry
