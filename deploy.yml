@@ -1,0 +1,15 @@
+---  
+- name: Update repository PHP OCR
+  hosts: criare
+  tasks:
+    - name: Public key
+      authorized_key:
+        user: root
+        state: present
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+        
+    - name: PHP OCR Github Repository
+      become: yes
+      git:
+        repo: 'git@github.com:rafaeldemeirateixeira/ci.git'
+        dest: "/var/www/phpocr"
